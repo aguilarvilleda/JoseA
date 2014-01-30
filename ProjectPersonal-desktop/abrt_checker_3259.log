@@ -1,0 +1,5 @@
+Uncaught java.lang.Error exception in thread "main" in a method com.me.mygdxgame.Main.main() with signature ([Ljava/lang/String;)V
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	String literal is not properly closed by a double-quote
+
+	at com.me.mygdxgame.Main.main(Main.java:16) [file:/home/alumno/JoseA/ProjectPersonal-desktop/bin/com/me/mygdxgame/Main.class]
