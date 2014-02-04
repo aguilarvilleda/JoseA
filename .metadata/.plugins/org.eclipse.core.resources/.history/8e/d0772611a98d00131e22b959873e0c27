@@ -53,10 +53,7 @@ public class MyGdxGame implements ApplicationListener {
 		sprite.draw(batch);
 		batch.end();
 		sprite.setRotation(rotacion);
-		if(Gdx.input.isTouched()){
-			
-		
-		rotacion++;}
+		rotacion++;
 	}
 	
 	@Override
