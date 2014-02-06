@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Operacion {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner mi_Scanner =new Scanner(System.in);
+		
+int num1=mi_Scanner.nextInt();
+int num2=mi_Scanner.nextInt();
+
+System.out.println("Ingrese numero 1"+num1);
+System.out.println("Ingrese numero 1"+num2);
+
+
+System.out.print("La suma es: ");
+System.out.println(num1+num2);
+
+System.out.print("La resta es: ");
+System.out.println(num1-num2);
+
+System.out.print("La multiplicacion es: ");
+System.out.println(num1*num2);
+
+System.out.print("La division es: ");
+System.out.println(num1/num2);
+
+
+	}
+
+}

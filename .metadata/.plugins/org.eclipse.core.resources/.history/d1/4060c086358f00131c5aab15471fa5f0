@@ -1,0 +1,24 @@
+class B{
+	int x;
+}
+
+public class Main {
+
+	int a;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		B miObjeto = new B();
+		miObjeto.x = 10;
+
+		B miOtroObjeto = new B();
+		miOtroObjeto.x = 20;
+		
+		System.out.println(miObjeto.x);
+		System.out.println(miOtroObjeto.x);
+	}
+	public static int funcion(){
+		return 1;
+	}
+
+}

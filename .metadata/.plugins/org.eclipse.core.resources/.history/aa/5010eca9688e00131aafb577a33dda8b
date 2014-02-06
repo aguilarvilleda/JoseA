@@ -1,0 +1,15 @@
+package java.util;
+
+public class Operacion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int num1=5;
+int num2=7;
+
+System.out.print("La suma es: ");
+System.out.println(num1+num2);
+
+	}
+
+}
