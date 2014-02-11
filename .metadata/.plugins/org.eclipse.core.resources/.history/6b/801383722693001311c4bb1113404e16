@@ -17,8 +17,8 @@ public class MyGdxGame implements ApplicationListener {
 	private Sprite sprite;
 	private Sprite sprite2;
 	int rotacion =0;
-	private Texture textura_nave;
-	private Sprite sprite_nave;
+	Texture textura_nave;
+	Sprite sprite_nave;
 	
 	@Override
 	public void create() {		
@@ -62,14 +62,13 @@ public class MyGdxGame implements ApplicationListener {
 		batch.begin();
 		sprite.draw(batch);
 		sprite2.draw(batch);
-		sprite_nave.draw(batch);
 		batch.end();
 		sprite.setRotation(rotacion);
 		if(Gdx.input.isTouched()){		
 			rotacion++;
 		}
 		
-		
+		sprite_nave.draw(batch);
 	}
 	
 	@Override

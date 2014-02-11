@@ -40,10 +40,9 @@ public class MyGdxGame implements ApplicationListener {
 		sprite.setPosition(0,0);
 		sprite.setRotation(25);
 		
-		textura_nave = new Texture(Gdx.files.internal("data/Nave.png"));
-		sprite_nave = new Sprite(textura_nave,128,64);
-		sprite_nave.setPosition(-0.5f, -0.5f);
-		sprite_nave.setSize(0.5f, 0.5f);
+		textura_nave = new Texture(Gdx.files.internal("data/nave.png"));
+		TextureRegion region_nave = new TextureRegion(textura_nave,0,0,125,64);
+		sprite_nave = new Sprite(region_nave);
 		
 	}
 
@@ -62,14 +61,13 @@ public class MyGdxGame implements ApplicationListener {
 		batch.begin();
 		sprite.draw(batch);
 		sprite2.draw(batch);
-		sprite_nave.draw(batch);
 		batch.end();
 		sprite.setRotation(rotacion);
 		if(Gdx.input.isTouched()){		
 			rotacion++;
 		}
 		
-		
+		sprite_nave.draw(batch);
 	}
 	
 	@Override
