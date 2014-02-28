@@ -17,6 +17,8 @@ public class MyGdxGame implements ApplicationListener {
 	private Sprite sprite;
 	private Sprite sprite2;
 	int rotacion =0;
+	private Texture textura_fondo;
+	private Sprite sprite_fondo;
 	private Texture textura_nave;
 	private Sprite sprite_nave;
 	
@@ -28,10 +30,19 @@ public class MyGdxGame implements ApplicationListener {
 		camera = new OrthographicCamera(1, h/w);
 		batch = new SpriteBatch();
 		
+
 		texture = new Texture(Gdx.files.internal("data/libgdx.png"));
 		texture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		
 		TextureRegion region = new TextureRegion(texture, 0, 0, 512, 275);
+		
+		
+		textura_fondo = new Texture(Gdx.files.internal("data/libgdx2.png"));
+		TextureRegion region2 = new TextureRegion(textura_fondo, 0, 0, 512, 400);
+		sprite_fondo = new Sprite(region2);
+		sprite_fondo.setSize(1.0f, 1.0f * sprite_fondo.getHeight()/sprite_fondo.getWidth());
+		sprite_fondo.setOrigin(sprite_fondo.getWidth()/2, sprite_fondo.getHeight()/2);
+		sprite_fondo.setPosition(-0.5f,-0.4f);
 		
 		sprite = new Sprite(region);
 		sprite2 = new Sprite(region);
@@ -39,6 +50,7 @@ public class MyGdxGame implements ApplicationListener {
 		sprite.setOrigin(sprite.getWidth()/2, sprite.getHeight()/2);
 		sprite.setPosition(0,0);
 		sprite.setRotation(25);
+		
 		
 		textura_nave = new Texture(Gdx.files.internal("data/Nave.png"));
 		sprite_nave = new Sprite(textura_nave,128,64);
@@ -55,19 +67,21 @@ public class MyGdxGame implements ApplicationListener {
 
 	@Override
 	public void render() {		
-		Gdx.gl.glClearColor(0f,0.5f,0.75f,1);
-		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		
+		Gdx.gl.glClearColor(0f,0f,0f,0);
+		//Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+
 		batch.setProjectionMatrix(camera.combined);
 		batch.begin();
-		sprite.draw(batch);
-		sprite2.draw(batch);
+		sprite_fondo.draw(batch);
+		//sprite.draw(batch);
+		//sprite2.draw(batch);
+		
 		sprite_nave.draw(batch);
 		batch.end();
-		sprite.setRotation(rotacion);
+		/*sprite.setRotation(rotacion);
 		if(Gdx.input.isTouched()){		
 			rotacion++;
-		}
+		}*/
 		
 		
 	}
